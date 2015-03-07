@@ -7,13 +7,13 @@ body{
 }
 
 .jumbotron{
-	margin-top: -2%;
+	margin-top: 0%;
 	padding-bottom: 10px;
 	background-color: #E0FFFF;
 }
 
 #messageToday{
-	padding-top: 3%;
+	padding-top: 2%;
 	font-size: 180%;
 	padding-bottom: 10%;
 }
@@ -37,7 +37,7 @@ body{
 	width: 100%;
 	/* Set the fixed height of the footer here */
 	height: 35%;
-	max-height: 245px;
+	max-height: 250px;
 
 }
 
