@@ -14,8 +14,16 @@ body{
 	padding-bottom: 10%;
 }
 
+#myDate {
+	font-size: 300%;
+}
+
+#myTime {
+	font-size: 200%;
+}
+
 #myBox{
-	margin-top: 4%;
+	margin-top: 6%;
 }
 
 #myFooter {
@@ -25,12 +33,13 @@ body{
 	width: 100%;
 	/* Set the fixed height of the footer here */
 	height: 35%;
+	max-height: 245px;
 
 }
 
 #myButton{
 	padding-top: 1%;
-	text-align:center
+	text-align:center;
 }
 
 
