@@ -1,5 +1,7 @@
 body{
 	background-color: #5F9EA0;
+	font-family: Palatino Linotype;
+
 }
 
 .jumbotron{
@@ -19,7 +21,7 @@ body{
 }
 
 #myTime {
-	font-size: 200%;
+	font-size: 225%;
 }
 
 #myBox{

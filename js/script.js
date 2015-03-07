@@ -10,6 +10,7 @@ $( document ).ready(function() {
 	}, updateFreq * 1000); //updates every 2 seconds
 
 	$( "#myButton" ).click(function() {
+
 		if (clickCount == 0){
 			$('.btn-info').css('background-color','#5cb85c');
 			$('.btn-info').html('Submitted');
@@ -17,13 +18,16 @@ $( document ).ready(function() {
 			$('#subMess').val('');
 			console.log("clicks: " + clickCount);
 			clickCount = clickCount + 1;
+		} else{
+			var mess = $('#subMess').text();
+			if (true){
+				console.log("clicks: " + clickCount);
+				clickCount = clickCount + 1;
+				$('#subMess').val('');
+				$('#subMess').attr("placeholder","message resubmitted!");
+				$('.btn-info').html('Resubmitted');
+			}
 		}
-		console.log("clicks: " + clickCount);
-		clickCount = clickCount + 1;
-		$('#subMess').attr("placeholder","message submitted!");
-
-		// clickCount = clickCount + 1;
-		// console.log(clickCount);
 	});
 
 
