@@ -1,6 +1,6 @@
 var months = [ "January", "February", "March", "April", "May", "June", 
 "July", "August", "September", "October", "November", "December" ];
-var updateFreq = 10; // in seconds
+var updateFreq = 15; // in seconds
 var clickCount= 0;
 
 $( document ).ready(function() {
@@ -13,8 +13,9 @@ $( document ).ready(function() {
 
 		if (clickCount == 0){
 			$('.btn-info').css('background-color','#5cb85c');
+			var t = '<textarea>';
 			$('.btn-info').html('Submitted');
-			$('#subMess').attr("placeholder","message submitted!");
+			$('#subMess').attr("placeholder","[display user submitted text]");
 			$('#subMess').val('');
 			console.log("clicks: " + clickCount);
 			clickCount = clickCount + 1;
@@ -24,10 +25,17 @@ $( document ).ready(function() {
 				console.log("clicks: " + clickCount);
 				clickCount = clickCount + 1;
 				$('#subMess').val('');
-				$('#subMess').attr("placeholder","message resubmitted!");
-				$('.btn-info').html('Resubmitted');
+				$('#subMess').attr("placeholder","[display user resubmitted text]");
 			}
 		}
+
+		$('#my_form').keydown(function() {
+var key = e.which;
+if (key == 13) {
+// As ASCII code for ENTER key is "13"
+$('#my_form').submit(); // Submit form code
+}
+});
 	});
 
 
@@ -44,8 +52,10 @@ function update() {
 	var year = (new Date).getFullYear();
 
 	var hours = (new Date).getHours();
-	if (hours == 0){
+	if (hours == 12 || 12){
 		hours = 12;
+	} else {
+		hours = hours % 12;
 	}
 	var minutes = (new Date).getMinutes();
 	if (minutes < 10){
