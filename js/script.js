@@ -35,7 +35,6 @@ $( document ).ready(function() {
 
 		$('#my_form').submit(); {} // Submit form code
 		//
-		}
 	}
 });
 	});
