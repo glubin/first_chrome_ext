@@ -52,8 +52,10 @@ function update() {
 	var month = (new Date).getMonth();
 	var year = (new Date).getFullYear();
 
+	
 	var hours = (new Date).getHours();
-	if (hours == 12 || 12){
+
+	if (hours == 12 || hours == 0 || hours == 24){
 		hours = 12;
 	} else {
 		hours = hours % 12;
